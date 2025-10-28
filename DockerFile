@@ -1,4 +1,4 @@
-#Docker File
+#Docker File for basic command for ADD data into cloud directory.
 
 FROM ubuntu -----------------------------------------------------> Base Image
 
