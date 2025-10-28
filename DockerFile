@@ -1,3 +1,21 @@
 #Docker File
 
+FROM ubuntu -----------------------------------------------------> Base Image
 
+
+RUN apt update &&  apt install nginx -y -------------------------> Installing Package
+
+
+RUN echo "<h1>Hello Cloud</h1>" > /var/www/html/index.html ------> Print Message While creating Nginx server inside index.html
+
+
+RUN mkdir -p /devops/cloud ---------------------------------------> Creating directory 
+
+
+ADD https://github.com/Aditya986025/Aws.git /devops/cloud/  -------> Above we create directory cloud so, our ADD data go inside that directory
+
+
+EXPOSE 8080 --------------------------------------------------------> We set port number
+
+
+CMD ["nginx", "-g", "daemon off;"] ---------------------------------> webserver service start.
